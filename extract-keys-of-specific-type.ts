@@ -16,6 +16,7 @@ type FunctionProperties = FunctionProps<Person>;
 // can't do this because Function | undefined are not specific "keys" or "properties"
 // Pick generic -> needs specific properties as keys, not their types as second argument
 // type FunctionWithPick = Pick<Person, Function | undefined>;
+type WithPickFunction = Pick<Person, "greet" | "job">
 
 // FunctionProperties will be:
 // { greet: () => void, job?: () => void }
